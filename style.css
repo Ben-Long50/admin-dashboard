@@ -59,11 +59,16 @@ img{
     gap: 25px;
 }
 
-#logo{  
+#logo-header{  
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+}
+
+#logo{
+    height: 65px;
+    width: auto;
 }
 
 #page-heading{
@@ -82,7 +87,7 @@ li{
     justify-content: flex-start;
     align-items: center;
     gap: 15px;
-    transform-origin: center center;
+    transform-origin: 20% center;
 }
 
 li:hover{
@@ -90,7 +95,7 @@ li:hover{
 }
 
 @keyframes highlight-selection{
-    100% {filter: invert(100%); transform: scale(1.05)};
+    100% {filter: invert(100%); transform: scale(1.1)};
 }
 
 #navigation{
@@ -138,6 +143,12 @@ li:hover{
     font-size: 20px;
 }
 
+#notification-container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+}
+
 #notification{
     background-image: url('social-media-icons/notification.png');
     height: 38px;
@@ -165,6 +176,14 @@ li:hover{
     border-radius: 25px;
     background-color: rgb(82, 156, 82);
     border: none;
+}
+
+.profile-button:hover{
+    animation: hover-profile-button ease 0.15s forwards;
+}
+
+@keyframes hover-profile-button{
+    100% {transform: scale(1.15)}
 }
 
 #dashboard{
@@ -209,12 +228,13 @@ li:hover{
 }
 
 .project-card:hover{
-    animation: hover-project-card ease 0.15s forwards
+    animation: hover-project-card ease 0.15s forwards;
 }
 
 @keyframes hover-project-card{
     100% {transform: scale(1.05)}
 }
+
 .utility-icon-container{
     display: flex;
     justify-content: flex-end;
@@ -236,6 +256,21 @@ li:hover{
     padding: var(--content-padding);
     box-shadow: var(--content-shadow);
     min-width: 200px;
+    padding: 0 25px;
+}
+
+.announcement,
+.profile-info{
+    padding: 25px 0;
+}
+
+.announcement-description{
+    margin: 0;
+    padding: 20px 0 0 0;
+}
+
+hr{
+    margin: 0;
 }
 
 .profile-info{
@@ -252,14 +287,27 @@ li:hover{
     flex-shrink: 0;
 }
 
+.profile,
+.large-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
 .profile{
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
+}
+
+.profile-picture{
+    height: auto;
+    width: 130%;
 }
 
 .large-profile{
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
 }
 
 .favorite{
